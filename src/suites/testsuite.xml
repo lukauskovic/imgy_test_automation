@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RESTSuite" verbose="1">
+
+    <test name="REST API Tests" enabled="true">
+        <classes>
+            <class name="com.autotests.tests.Auth"/>
+            <class name="com.autotests.tests.ImageInteractions"/>
+        </classes>
+    </test>
+</suite>
