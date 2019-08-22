@@ -15,7 +15,7 @@ import com.rest.autotests.objects.*;
 
 public class Auth {
 
-    private static User user = new User(USER_EMAIL, USER_PASSWORD, USER_USERNAME);
+    static User user = new User(USER_EMAIL, USER_PASSWORD, USER_USERNAME);
     static User registrationUser = new User(randMail(), randPass(), randUsername());
     private static JSONObject loginBody = new JSONObject().put("email", user.getEmail()).put("password", user.getPassword());
     private static JSONObject registrationBody = new JSONObject().
@@ -66,6 +66,7 @@ public class Auth {
         response.then().statusCode(200);
         response.then().body("token", notNullValue());
         registrationUser.setToken(response.then().extract().path("token").toString());
+        registrationUser.setId(response.then().extract().path("_id").toString());
     }
 
     @Test
