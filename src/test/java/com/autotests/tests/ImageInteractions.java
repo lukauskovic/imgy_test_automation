@@ -19,7 +19,7 @@ import static org.hamcrest.core.IsNull.notNullValue;
 
 public class ImageInteractions {
 
-    private static Image image = new Image("testDescription", System.getProperty("user.dir") + "/src/test/java/test_data/test.jpg");
+    static Image image = new Image("testDescription", System.getProperty("user.dir") + "/src/test/java/test_data/test.jpg");
     private static JSONObject imageBody = new JSONObject().put("description", image.getDescription());
 
     @Test

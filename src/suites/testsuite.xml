@@ -5,6 +5,7 @@
         <classes>
             <class name="com.autotests.tests.Auth"/>
             <class name="com.autotests.tests.ImageInteractions"/>
+            <class name="com.autotests.tests.UserActions"/>
         </classes>
     </test>
 </suite>
